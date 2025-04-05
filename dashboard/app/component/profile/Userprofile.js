@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React, { useState } from 'react';
 import { CgGenderFemale } from "react-icons/cg";
 import { CgGenderMale } from "react-icons/cg";
@@ -62,7 +63,18 @@ function Userprofile({ username, age, gender, developer }) {
 
   return (
     <div className="flex flex-col h-fit w-full items-center mt-16 gap-4">
-      <div className="rounded-full w-[100px] h-[100px] bg-white"></div>
+      <div className="rounded-full w-[100px] h-[100px] bg-white">
+
+        <Image
+          src={"/test-profile.jpg"}
+          width={500}
+          height={500}
+          className='w-full h-full rounded-full'
+          alt='profile picture'
+        />
+
+
+      </div>
       
       <h3 className="text-black font-bold w-[150px] text-center">{username}</h3>
 

@@ -2,6 +2,10 @@ import React from 'react';
 import ReactECharts from 'echarts-for-react';
 
 function TotalVisitChart() {
+
+    const data = [
+        10, 150, 420, 211, 587, 758, 220, 835, 80, 248, 320, 200
+    ]
     const option = {
         title: {
             text: 'Total Visits by Month',
@@ -52,7 +56,7 @@ function TotalVisitChart() {
         series: [
             {
                 name: '2025',
-                data: new Array(12).fill(0),
+                data: data,
                 type: 'line',
                 smooth: true,
                 lineStyle: {
