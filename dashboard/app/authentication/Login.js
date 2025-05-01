@@ -31,7 +31,7 @@ function Login() {
         const user = { username };
         const data = await LoginUser(username);
     
-        if (data) {
+        if (data && data.success) {
             setSnackbarSeverity(data.status);
             setSnackbarMessage(data.message);
             setSnackbar(true);
